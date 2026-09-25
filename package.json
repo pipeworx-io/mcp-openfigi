@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-openfigi",
-  "version": "0.1.0",
-  "description": "OpenFIGI — Bloomberg open financial-instrument symbology service",
+  "version": "0.1.1",
+  "description": "OpenFIGI MCP — financial-instrument symbology.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-openfigi": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "openfigi"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-openfigi"
+    "url": "git+https://github.com/pipeworx-io/mcp-openfigi.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-eaa17a6d098f6df85321f8e3c0f3e5e292e625d59546ce6d2147c6c64ab04a89",
+    "sourceCommit": "adb69d997f82a62e8e22b594488c7d04a227db35"
   }
 }
